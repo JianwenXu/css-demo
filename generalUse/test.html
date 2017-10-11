@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 常用功能</title>
+  <style type="text/css">
+    /*因为找不到全部格式的字体文件，可能存在兼容问题*/
+    @font-face{
+      font-family: 'myFont';
+      src: local('fonts/myFont.ttf'), url('fonts/myFont.ttf') format('truetype');
+    }
+    .box{
+      height: 300px;
+      width: 300px;
+      background: blue;
+      font-size: 50px;
+      color: white;
+      line-height: 300px;
+      text-align: center;
+    }
+    .box_round{
+      -moz-border-radius: 30px;
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+    }
+    .box_shadow{
+      box-shadow: 3px 3px 4px #fea501;
+      -moz-box-shadow: 3px 3px 4px #fea501;
+      -webkit-box-shadow: 3px 3px 4px #fea501;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=3px, OffY=3px, Color='#fea501');/*IE6,IE7*/
+      -ms-filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=3px, OffY=3px, Color='#fea501');/*IE8*/
+    }
+    .box_gradient{
+      background-image: -moz-linear-gradient(top, #444, #999);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(1, #999));
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#999', GradientType='0'); /* IE6,IE7 */
+　　  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#999', GradientType='0')"
+    }
+    .box_rgba{
+      background-color: #b4b490;
+      background: transparent;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490');
+　　  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490')";
+      zoom: 1;
+      background-color: rgba(180, 180, 144, 0.6);
+    }
+    .box_rotate{
+      /*顺时针旋转7.5度(degree)*/
+      -moz-transform: rotate(7.5deg);
+      -o-transform: rotate(7.5deg);
+      -webkit-transform: rotate(7.5deg);
+      filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9914,M12=-0.1305,M21=0.1305,M22=0.9914,SizingMethod='auto expand');
+　　-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914,M12=-0.1305,M21=0.1305,M22=0.9914,SizingMethod='auto expand')"; /* IE8 */
+    }
+    .box_font{
+      font-family: 'myFont';
+    }
+    .box3{
+      /*第二个透明盒子*/
+      position: absolute;
+      top: 150px;
+      left: 150px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 链接：http://www.ruanyifeng.com/blog/2010/03/cross-browser_css3_features.html -->
+  <h4>圆角 and 阴影 and 线性渐变</h4>
+  <div class="box box_round box_shadow box_gradient">圆角</div>
+  <h4>透明</h4>
+  <div style="position: relative; height: 500px;">
+    <div class="box box_round">透明盒子1</div>
+    <div class="box box3 box_round box_rgba">透明盒子2</div>
+  </div>
+  <h4>旋转</h4>
+  <div class="box box_round box_rotate">旋转</div>
+  <h4>自定义字体</h4>
+  <div class="box box_round box_font" >hello world</div>
+</body>
+</html>
