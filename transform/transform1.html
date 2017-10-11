@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>transform 练习</title>
+  <style type="text/css">
+    .img{
+      width: 300px;
+      height: 300px;
+    }
+    .img1{
+      /* transform 会提升元素的垂直地位 */
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    .img2{
+      margin-left: -60px;
+    }
+  </style>
+</head>
+<body>
+  <img src="imgs/xiaoxin1.jpeg" class="img img1" />
+  <img src="imgs/xiaoxin2.png" class="img img2" />
+</body>
+</html>
