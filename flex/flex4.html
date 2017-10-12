@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Flex 学习 4 ( 输入框布局 ) </title>
+  <style type="text/css">
+    .inputAddOn {
+      display: flex;
+    }
+    .inputAddOn-item {
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #eee;
+      font-size: 16px;
+    }
+    .inputAddOn-item:first-child{
+      border-right-width: 0;
+    }
+    .inputAddOn-item:last-child{
+      border-left-width: 0;
+    }
+    .inputAddOn-field {
+      flex: 1;
+      border: 1px solid #ddd;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 在输入框前边添加提示，后边添加按钮 -->
+  <div class="inputAddOn">
+    <span class="inputAddOn-item">Account</span>
+    <input type="text" class="inputAddOn-field" />
+    <button class="inputAddOn-item">Send</button>
+  </div>
+</body>
+</html>

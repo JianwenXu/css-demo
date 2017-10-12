@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Flex 学习 3 ( 圣杯布局 ) </title>
+  <style type="text/css">
+    .holyGrail {
+      display: fix;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    header,footer {
+      flex: 1;
+    }
+    .holyGrail-body {
+      display: flex;
+      flex: 1;
+    }
+    .holyGrail-content {
+      flex: 1;
+    }
+    .holyGrail-nav, .holyGrail-ads {
+      flex: 0 0 12em;
+    }
+    .holyGrail-nav{
+      order: -1;
+    }
+    header,footer,main,nav,aside{
+      background: #eee;
+      text-align:center;
+      margin: 5px;
+      padding: 10px;
+    }
+    @media (max-width: 768px) {
+      /*媒体查询*/
+      .holyGrail-body {
+        flex-direction: column;
+        flex: 1;
+      }
+      .holyGrail-nav, .holyGrail-ads, .holyGrail-content {
+        flex: auto;
+      }
+    }
+  </style>
+</head>
+<body class="holyGrail">
+  <header>header</header>
+  <div class="holyGrail-body">
+    <main class="holyGrail-content">主栏</main>
+    <nav class="holyGrail-nav">导航</nav>
+    <aside class="holyGrail-ads">副栏</aside>
+  </div>
+  <footer>footer</footer>
+</body>
+</html>

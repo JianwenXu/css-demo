@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flex 学习 1</title>
+  <title> Flex 学习 1 ( 骰子的布局 ) </title>
   <style type="text/css">
     .first-face {
       display: flex;
@@ -32,12 +32,12 @@
       align-self: flex-end;
     }
 
-    .fourth-face, .sixth-face {
+    .fourth-face, .sixth-face, .ninth-face {
       display: flex;
       justify-content: space-around;
     }
 
-    .fourth-face .column, .sixth-face .column {
+    .fourth-face .column, .sixth-face .column, .ninth-face .column {
       display: flex;
       flex-direction: column; /*主轴的方向，起点在上沿*/
       justify-content: space-between; /*主轴对齐方式*/
@@ -148,6 +148,23 @@
     </div>
   </div>
   <div class="sixth-face">
+    <div class="column">
+      <span class="pip"></span>
+      <span class="pip"></span>
+      <span class="pip"></span>
+    </div>
+    <div class="column">
+      <span class="pip"></span>
+      <span class="pip"></span>
+      <span class="pip"></span>
+    </div>
+  </div>
+  <div class="ninth-face">
+    <div class="column">
+      <span class="pip"></span>
+      <span class="pip"></span>
+      <span class="pip"></span>
+    </div>
     <div class="column">
       <span class="pip"></span>
       <span class="pip"></span>
