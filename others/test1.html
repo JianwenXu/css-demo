@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>object-fit/object-position</title>
+  <style type="text/css">
+    .container{
+      display: inline-block;
+    }
+    .box{
+      width: 160px;
+      height: 160px;
+      background: #beceeb;
+    }
+    .box > img {
+      /*img替换元素和src替换内容是两个独立体*/
+      /*img替换元素收到CSS 100%拉伸控制*/
+      /*src替换内容也收到了object-fit展示控制*/
+      /*大家各司其职*/
+      width: 100%;
+      height: 100%;
+      background: #eb0;
+    }
+    .fill{
+      object-fit: fill;
+    }
+    .contain{
+      object-fit: contain;
+    }
+    .cover {
+      object-fit: cover;
+    }
+    .none{
+      object-fit: none;
+    }
+    .scale-down{
+      object-fit: scale-down;
+    }
+    .position1{
+      object-position: 100% 100%;
+    }
+    .position2{
+      object-position: right 20px bottom 10px; /*在Chrome上表现不一致*/
+    }
+    .position3{
+      object-position: calc(100% - 20px) calc(100% - 10px);
+    }
+  </style>
+</head>
+<body>
+  <!-- 链接：http://www.zhangxinxu.com/wordpress/2015/03/css3-object-position-object-fit/ -->
+  <div class="container">
+    <h4>fill (120)</h4>
+    <div class="box"><img src="imgs/xiaoxin120_153.jpeg" class="fill" /></div>
+  </div>
+  <div class="container">
+    <h4>contain (120)</h4>
+    <div class="box"><img src="imgs/xiaoxin120_153.jpeg" class="contain" /></div>
+  </div>
+  <div class="container">
+    <h4>cover (120)</h4>
+    <div class="box"><img src="imgs/xiaoxin120_153.jpeg" class="cover" /></div>
+  </div>
+  <div class="container">
+    <h4>none (120)</h4>
+    <div class="box"><img src="imgs/xiaoxin120_153.jpeg" class="none" /></div>
+  </div>
+  <div class="container">
+    <h4>scale-down (120)</h4>
+    <div class="box"><img src="imgs/xiaoxin120_153.jpeg" class="scale-down" /></div>
+  </div>
+  <hr />
+  <div class="container">
+    <h4>fill (160)</h4>
+    <div class="box"><img src="imgs/xiaoxin160_284.png" class="fill" /></div>
+  </div>
+  <div class="container">
+    <h4>contain (160)</h4>
+    <div class="box"><img src="imgs/xiaoxin160_284.png" class="contain" /></div>
+  </div>
+  <div class="container">
+    <h4>cover (160)</h4>
+    <div class="box"><img src="imgs/xiaoxin160_284.png" class="cover" /></div>
+  </div>
+  <div class="container">
+    <h4>none (160)</h4>
+    <div class="box"><img src="imgs/xiaoxin160_284.png" class="none" /></div>
+  </div>
+  <div class="container">
+    <h4>scale-down (160)</h4>
+    <div class="box"><img src="imgs/xiaoxin160_284.png" class="scale-down" /></div>
+  </div>
+  <hr />
+  <div class="container">
+    <h4>fill (556)</h4>
+    <div class="box"><img src="imgs/xiaoxin556_739.png" class="fill" /></div>
+  </div>
+  <div class="container">
+    <h4>contain (556)</h4>
+    <div class="box"><img src="imgs/xiaoxin556_739.png" class="contain" /></div>
+  </div>
+  <div class="container">
+    <h4>cover (556)</h4>
+    <div class="box"><img src="imgs/xiaoxin556_739.png" class="cover" /></div>
+  </div>
+  <div class="container">
+    <h4>none (556)</h4>
+    <div class="box"><img src="imgs/xiaoxin556_739.png" class="none" /></div>
+  </div>
+  <div class="container">
+    <h4>scale-down (556)</h4>
+    <div class="box"><img src="imgs/xiaoxin556_739.png" class="scale-down" /></div>
+  </div>
+</body>
+</html>
