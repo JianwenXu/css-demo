@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>text-shadow</title>
+  <style type="text/css">
+    .demo{
+      width: 320px;
+      margin: 20px;
+      padding: 20px;
+      font: bold 50px/100% "微软雅黑";
+      /*border: 1px solid red;*/
+    }
+    .demo1{
+      text-shadow: 0 0 8px #f00;
+      -webkit-text-shadow: 0 0 8px #f00;
+      -moz-text-shadow: 0 0 8px #f00;
+      -ms-text-shadow: 0 0 8px #f00;
+      -o-text-shadow: 0 0 8px #f00;
+      filter: shadow(Color=#f00,Direction=0,Strength=8);
+    }
+    .demo2{
+      text-shadow: 5px 5px 8px #f00;
+      -webkit-text-shadow: 5px 5px 8px #f00;
+      -moz-text-shadow: 5px 5px 8px #f00;
+      -ms-text-shadow: 5px 5px 8px #f00;
+      -o-text-shadow: 5px 5px 8px #f00;
+      filter: shadow(Color=#f00,Direction=45,Strength=8);
+    }
+    .demo3{
+      text-shadow: -5px -5px 8px #f00;
+      -webkit-text-shadow: -5px -5px 8px #f00;
+      -moz-text-shadow: -5px -5px 8px #f00;
+      -ms-text-shadow: -5px -5px 8px #f00;
+      -o-text-shadow: -5px -5px 8px #f00;
+      filter: shadow(Color=#f00,Direction=315,Strength=8);
+    }
+    /*四个角的阴影*/
+    .demo4{
+      /*左上角*/
+      text-shadow: -5px -5px 8px #0f0;
+    }
+    .demo5{
+      /*左下角*/
+      text-shadow: -5px 5px 8px #0f0;
+    }
+    .demo6{
+      /*右上角*/
+      text-shadow: 5px -5px 8px #0f0;
+    }
+    .demo7{
+      /*右下角*/
+      text-shadow: 5px 5px 8px #0f0;
+    }
+    .demo8{
+      /*多阴影*/
+      text-shadow: -10px 0 2px #f00, 0 -10px 2px #0f0,10px 0 4px #00f,0 10px 5px #f0f;
+    }
+    .demo9{
+      /*自定义阴影*/
+      background: #000;
+      text-shadow:
+        0 0 4px #fff,
+        0 -5px 4px #ff3,
+        3px -10px 6px #fd3,
+        -3px -15px 11px #C90,
+        3px -25px 18px #f20;
+    }
+    .demo10{
+      /*自定义阴影*/
+      background: #000;
+      color: #fff;
+      text-shadow:
+        0 0 1px #999,
+        1px 1px 2px #888,
+        2px 2px 2px #777,
+        3px 3px 2px #666,
+        4px 4px 2px #555,
+        5px 5px 2px #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- 链接：http://www.cnblogs.com/wuchuanlong/p/5985350.html -->
+  <div class="demo demo1">text-shadow</div>
+  <div class="demo demo2">text-shadow</div>
+  <div class="demo demo3">text-shadow</div>
+  <h4>注意：以下代码为了演示效果暂时不做兼容性处理</h4>
+  <div class="demo demo4">左上角</div>
+  <div class="demo demo5">左下角</div>
+  <div class="demo demo6">右上角</div>
+  <div class="demo demo7">右下角</div>
+  <div class="demo demo8">多阴影</div>
+  <div class="demo demo9">淡然的火焰</div>
+  <div class="demo demo10">淡然的3D</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>box-shadow</title>
+  <style type="text/css">
+    .box{
+      display: inline-block;
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      background: #fff;
+      border: 1px solid #070;
+    }
+    .box1{
+      box-shadow: 0 0 10px #f00;
+      -webkit-box-shadow: 0 0 10px #f00;
+      -moz-box-shadow: 0 0 10px #f00;
+      -o-box-shadow: 0 0 10px #f00;
+      -ms-box-shadow: 0 0 10px #f00;
+    }
+    .box2{
+      box-shadow: 4px 4px 10px #f00;
+      -webkit-box-shadow: 4px 4px 10px #f00;
+      -moz-box-shadow: 4px 4px 10px #f00;
+      -o-box-shadow: 4px 4px 10px #f00;
+      -ms-box-shadow: 4px 4px 10px #f00;
+    }
+    .box3{
+      box-shadow: -4px -4px 10px #f00;
+      -webkit-box-shadow: -4px -4px 10px #f00;
+      -moz-box-shadow: -4px -4px 10px #f00;
+      -o-box-shadow: -4px -4px 10px #f00;
+      -ms-box-shadow: -4px -4px 10px #f00;
+    }
+    .box4{
+      /*分别是左上右下，用逗号分隔*/
+      /*以下这种政府分别在各个边显现*/
+      box-shadow: -10px 0 10px #f00, 0 -10px 10px #000, 10px 0 10px #0f0, 0 10px 10px #00f;
+      -webkit-box-shadow: -10px 0 10px #f00, 0 -10px 10px #000, 10px 0 10px #0f0, 0 10px 10px #00f;
+      -moz-box-shadow: -10px 0 10px #f00, 0 -10px 10px #000, 10px 0 10px #0f0, 0 10px 10px #00f;
+      -o-box-shadow: -10px 0 10px #f00, 0 -10px 10px #000, 10px 0 10px #0f0, 0 10px 10px #00f;
+      -ms-box-shadow: -10px 0 10px #f00, 0 -10px 10px #000, 10px 0 10px #0f0, 0 10px 10px #00f;
+    }
+    /*内阴影*/
+    .box5{
+      box-shadow: 0 0 10px #f00 inset;
+      -webkit-box-shadow: 0 0 10px #f00 inset;
+      -moz-box-shadow: 0 0 10px #f00 inset;
+      -o-box-shadow: 0 0 10px #f00 inset;
+      -ms-box-shadow: 0 0 10px #f00 inset;
+    }
+    .box6{
+      box-shadow: 4px 4px 10px #f00 inset;
+      -webkit-box-shadow: 4px 4px 10px #f00 inset;
+      -moz-box-shadow: 4px 4px 10px #f00 inset;
+      -o-box-shadow: 4px 4px 10px #f00 inset;
+      -ms-box-shadow: 4px 4px 10px #f00 inset;
+    }
+    .box7{
+      box-shadow: -4px -4px 10px #f00 inset;
+      -webkit-box-shadow: -4px -4px 10px #f00 inset;
+      -moz-box-shadow: -4px -4px 10px #f00 inset;
+      -o-box-shadow: -4px -4px 10px #f00 inset;
+      -ms-box-shadow: -4px -4px 10px #f00 inset;
+    }
+    .box8{
+      /*分别是左上右下，用逗号分隔*/
+      /*以下这种政府分别在各个边显现*/
+      box-shadow:
+        10px 0 10px #f00 inset,
+        0 10px 10px #000 inset,
+        -10px 0 10px #0f0 inset,
+        0 -10px 10px #00f inset;
+      -webkit-box-shadow:
+        10px 0 10px #f00 inset,
+        0 10px 10px #000 inset,
+        -10px 0 10px #0f0 inset,
+        0 -10px 10px #00f inset;
+      -moz-box-shadow:
+        10px 0 10px #f00 inset,
+        0 10px 10px #000 inset,
+        -10px 0 10px #0f0 inset,
+        0 -10px 10px #00f inset;
+      -o-box-shadow:
+        10px 0 10px #f00 inset,
+        0 10px 10px #000 inset,
+        -10px 0 10px #0f0 inset,
+        0 -10px 10px #00f inset;
+      -ms-box-shadow:
+        10px 0 10px #f00 inset,
+        0 10px 10px #000 inset,
+        -10px 0 10px #0f0 inset,
+        0 -10px 10px #00f inset;
+    }
+  </style>
+</head>
+<body>
+  <!-- 链接：http://www.cnblogs.com/wuchuanlong/p/5980766.html -->
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+  <div class="box box4"></div>
+  <div class="box box5"></div>
+  <div class="box box6"></div>
+  <div class="box box7"></div>
+  <div class="box box8"></div>
+</body>
+</html>
