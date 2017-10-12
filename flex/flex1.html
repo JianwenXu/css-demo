@@ -6,8 +6,8 @@
   <style type="text/css">
     .first-face {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /*主轴对齐方式*/
+      align-items: center; /*交叉轴对齐方式*/
     }
 
     .second-face {
@@ -16,7 +16,7 @@
     }
 
     .second-face .pip:nth-of-type(2) {
-      align-self: flex-end;
+      align-self: flex-end; /*允许单个项目有与其他项目不一样的对齐方式*/
     }
 
     .third-face {
@@ -34,13 +34,13 @@
 
     .fourth-face, .sixth-face {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     .fourth-face .column, .sixth-face .column {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-direction: column; /*主轴的方向，起点在上沿*/
+      justify-content: space-between; /*主轴对齐方式*/
     }
 
     .fifth-face {
@@ -66,18 +66,19 @@
 
     html, body {
       height: 100%;
-      background: #232323;
     }
 
     body {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      vertical-align: center;
-      flex-wrap: wrap;
-      align-content: center;
+      align-items: center; /*定义项目在交叉轴上如何对齐*/
+      justify-content: center; /*定义项目在主轴上如何对齐*/
+      vertical-align: center; /*教程里面说，定义了flex布局之后，子元素的float/clear/vertical-align属性将失效*/
+      flex-wrap: wrap; /*定义一条轴线排不下，如何换行(wrap:换行，第一行在上面)*/
+      align-content: center; /*定义多条轴线的对齐方式(center: 与交叉轴的中点对齐)*/
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(top, #222, #333);
+      /*背景渐变*/
+      background: -moz-linear-gradient(top, #222, #333);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(1, #333));
     }
 
     [class$="face"] {
@@ -86,9 +87,10 @@
       background-color: #e7e7e7;
       width: 104px;
       height: 104px;
-      object-fit: contain;
+      object-fit: contain; /*至少有一边与容器相等，可能存在留白*/
       box-shadow:
-        inset 0 5px white,
+        /* offset-x | offset-y | color */
+        inset 0 5px #fff,
         inset 0 -5px #bbb,
         inset 5px 0 #d7d7d7,
         inset -5px 0 #d7d7d7;
@@ -101,9 +103,10 @@
       height: 24px;
       border-radius: 50%;
       margin: 4px;
-
       background-color: #333;
-      box-shadow: inset 0 3px #111, inset 0 -3px #555;
+      box-shadow:
+        inset 0 3px #111,
+        inset 0 -3px #555;
     }
   </style>
 </head>
