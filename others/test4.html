@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mix-blend-mode</title>
+  <style type="text/css">
+    .mix-blend-mode-child{
+      mix-blend-mode: screen;
+      position: absolute;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .red{
+      color: #f00;
+    }
+    .green{
+      color: #0f0;
+    }
+    .blue{
+      color: #00f;
+    }
+    .background-blend-mode-box{
+      background:
+        url(imgs/xiaoxin160_284.png) no-repeat center,
+        url(imgs/xiaoxin556_739.png) no-repeat center;
+      width: 800px;
+      height: 800px;
+      background-blend-mode: overlay;
+    }
+  </style>
+</head>
+<body>
+  <!-- 链接：http://www.zhangxinxu.com/wordpress/2015/05/css3-mix-blend-mode-background-blend-mode/ -->
+  <div>
+    <img src="imgs/xiaoxin160_284.png" class="mix-blend-mode-child" />
+    <p class="mix-blend-mode-child">
+      啦啦啦
+      <span class="red">啦啦啦</span>
+      <span class="green">啦啦啦</span>
+      <span class="blue">啦啦啦</span>
+    </p>
+  </div>
+  <div class="background-blend-mode-box"></div>
+</body>
+</html>
