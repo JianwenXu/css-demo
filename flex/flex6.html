@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Flex 学习 6 ( 固定的底栏 ) </title>
+  <style type="text/css">
+    .site{
+      display: flex;
+      min-height: 100vh;
+      max-height: 100vh;
+      flex-direction: column;
+    }
+    .site-content{
+      flex: 1;
+    }
+    header,main,footer{
+      background: #eee;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body class="site">
+  <!-- 适用于内容比较少的情况 -->
+  <!-- 内容比较多的时候就会撑开，header,footer不再固定 -->
+  <header>header</header>
+  <main class="site-content">
+    春天像小姑娘，花枝招展的，笑着，走着。
+    春天像健壮的青年，有铁一般的胳膊和腰脚，领着我们上前去。
+  </main>
+  <footer>footer</footer>
+</body>
+</html>
